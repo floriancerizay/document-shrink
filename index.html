@@ -10,14 +10,24 @@
   <script src="js/app.js" defer></script>
 </head>
 <body>
-  <h1>Document Shrink</h1>
-  <p>Déposez une ou plusieurs archives ZIP : tous les PDF qu'elles contiennent sont remplacés par un PDF d'une page indiquant « Ce document a été remplacé pour des besoins de test », puis chaque archive allégée est téléchargée. Tout se passe dans le navigateur, rien n'est envoyé sur un serveur.</p>
+  <main>
+    <header>
+      <h1>Document Shrink</h1>
+      <p>Allège des archives ZIP pour des jeux de test : chaque PDF est remplacé par un PDF d'une page indiquant
+        « Ce document a été remplacé pour des besoins de test ».
+        <a id="preview" href="#" target="_blank">Voir le PDF de remplacement</a></p>
+    </header>
 
-  <label id="drop">
-    Glisser une ou plusieurs archives .zip ici ou cliquer pour choisir
-    <input id="file" type="file" accept=".zip,application/zip" multiple hidden>
-  </label>
+    <label id="drop">
+      <input id="file" type="file" accept=".zip,application/zip" multiple>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0-4 4m4-4 4 4M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+      <strong>Glissez vos archives .zip ici</strong>
+      <span>ou cliquez pour les choisir, plusieurs fichiers possibles</span>
+    </label>
 
-  <div id="log"></div>
+    <ul id="results"></ul>
+
+    <footer>Tout est traité dans votre navigateur : aucun fichier n'est envoyé sur un serveur.</footer>
+  </main>
 </body>
 </html>
