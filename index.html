@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document Shrink</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+  <script src="js/placeholder-pdf.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <h1>Document Shrink</h1>
+  <p>Déposez une ou plusieurs archives ZIP : tous les PDF qu'elles contiennent sont remplacés par un PDF d'une page indiquant « Ce document a été remplacé pour des besoins de test », puis chaque archive allégée est téléchargée. Tout se passe dans le navigateur, rien n'est envoyé sur un serveur.</p>
+
+  <label id="drop">
+    Glisser une ou plusieurs archives .zip ici ou cliquer pour choisir
+    <input id="file" type="file" accept=".zip,application/zip" multiple hidden>
+  </label>
+
+  <div id="log"></div>
+</body>
+</html>
